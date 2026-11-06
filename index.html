@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>О себе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        h1,
+        h2,
+        h3 {
+            font-family: 'Russo One', sans-serif;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+        }
+    </style>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Беспалова Евгения, футуролог и концепт-художник</h1>
+        </header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#future-technologies">Технологии</a></li>
+                <li><a href="#forecast-sect">Прогнозы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="content">
+                <div id="avatar">
+                    <img src="https://picsum.photos/200" width="200" height="200" style="border-radius: 50%;"
+                        alt="Аватар Евгении Беспаловой">
+                </div>
+                <section style="overflow: hidden" id="skills">
+                    <h2>Навыки</h2>
+                    <ul>
+                        <li>создание концепт-артов - создаю уникальные концепты для будущих продуктов</li>
+                        <li>анализ трендов - изучаю и прогнозирую будущие направления в дизайне и технологиях</li>
+                        <li>работа с 3D-моделями - создаю детализированные модели для различных применений</li>
+                        <li>векторная графика - разрабатываю эстетичные и функциональные векторные решения</li>
+                    </ul>
+                </section>
+                <section style="overflow: hidden" id="projects">
+                    <h2>Проекты</h2>
+                    <ol>
+                        <li>города будущего - через 100 лет все будет иначе</li>
+                        <li>интерактивные инсталляции - создаю immersive опыт для пользователей</li>
+                        <li>виртуальная реальность - разрабатываю интерактивные среды для различных применений</li>
+                        <li>нейроинтерфейсы - исследую возможности взаимодействия между мозгом и компьютером</li>
+                    </ol>
+                </section>
+                <section id="future-technologies">
+                    <h2>Технологии будущего</h2>
+                    <div class="techno-cards">
+                        <article class="card">
+                            <h3>Заселение Марса</h3>
+                            <p>Автономные поселения на Марсе с замкнутым циклом жизни.</p>
+                            <p class="year">Год прогноза: <mark>2050</mark></p>
+                        </article>
+                        <article class="card">
+                            <h3>Нейроинтерфейсы</h3>
+                            <p>Прямое соединение мозга с компьютером.</p>
+                            <p class="year">Год прогноза: <mark>2035</mark></p>
+                        </article>
+                        <article class="card">
+                            <h3>Квантовые вычисления</h3>
+                            <p>Решение задач, недоступных классическим компьютерам.</p>
+                            <p class="year">Год прогноза: <mark>2040</mark></p>
+                        </article>
+                        <article class="card">
+                            <h3>Терраформирование</h3>
+                            <p>Изменение климата планет для жизни без скафандра.</p>
+                            <p class="year">Год прогноза: <mark>2070</mark></p>
+                        </article>
+                    </div>
+                </section>
+                <section id="forecast">
+                    <h2>Прогнозы по сферам</h2>
+                    <div class="forecast-grid">
+                        <div class="forecast-item">
+                            <h3>Медицина</h3>
+                            <p>Персонализированные лекарства на основе ДНК.</p>
+                            <p>Вероятность: <mark>85%</mark></p>
+                        </div>
+                        <div class="forecast-item">
+                            <h3>Транспорт</h3>
+                            <p>Автономные города без личных автомобилей.</p>
+                            <p>Вероятность: <mark>70%</mark></p>
+                        </div>
+                        <div class="forecast-item">
+                            <h3>Энергетика</h3>
+                            <p>Переход на альтернативные источники энергии</p>
+                            <p>Вероятность: <mark>60%</mark></p>
+                        </div>
+                        <div class="forecast-item">
+                            <h3>Образование</h3>
+                            <p>ИИ-наставники для каждого ученика.</p>
+                            <p>Вероятность: <mark>90%</mark></p>
+                        </div>
+                        <div class="forecast-item">
+                            <h3>Космос</h3>
+                            <p>Первая постоянная база на Луне.</p>
+                            <p>Вероятность: <mark>55%</mark></p>
+                        </div>
+                        <div class="forecast-item">
+                            <h3>Климат</h3>
+                            <p>Улавливание CO₂ из атмосферы.</p>
+                            <p>Вероятность: <mark>75%</mark></p>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="contacts" style="overflow: hidden">
+                    <h2>Контакты</h2>
+                    <p>Если вы хотите связаться со мной, пожалуйста, заполните форму ниже:</p>
+                    <form action="#">
+                        <div>
+                            <label for="name">Имя:</label>
+                            <input id="name" name="name" type="text" placeholder="Введите ваше имя">
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input id="email" name="email" type="email" placeholder="Введите ваш email">
+                        </div>
+                        <div>
+                            <label for="message">Сообщение:</label>
+                            <textarea name="message" id="message" placeholder="Введите ваше сообщение"></textarea>
+                        </div>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <aside>
+                <h3>Технология, которая изменит мир</h3>
+                <p>Космические колонии - это будущее человечества в космосе.</p>
+                <p>Они позволят жить на других планетах и сотрудничать с инопланетными цивилизациями. Таким образом,
+                    человечество сможет расширить свои границы и выйти за пределы Земли.</p>
+            </aside>
+        </main>
+        <footer>
+            <p>&copy; <span id="year">2026</span> Беспалова Евгения. Все права защищены.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
