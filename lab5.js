@@ -12,6 +12,28 @@ function createForecastItem(title, description, probability) {
     return card;
 }
 
+function getForecastsFromDOM() {
+    const cards = document.querySelectorAll('#forecast-grid .forecast-item');
+    const result = [];
+    cards.forEach(c => {
+        const title = c.querySelector('h3').textContent;
+        const description = c.querySelector('p').textContent;
+        const probability = c.querySelector('mark').textContent.replace('%', '');
+        result.push({ title, description, probability });
+    });
+    return result;
+}
+
+function setForecastsToDOM(forecasts) {
+    const grid = document.getElementById('forecast-grid');
+    grid.innerHTML = '';
+
+    forecasts.forEach(f => {
+        const card = createForecastItem(f.title, f.description, f.probability);
+        grid.appendChild(card);
+    });
+}
+
 const addBtn = document.getElementById('add-forecast-btn');
 const grid = document.getElementById('forecast-grid');
 
@@ -27,4 +49,10 @@ addBtn.addEventListener('click', () => {
 
     const card = createForecastItem(title, description, probability);
     grid.appendChild(card);
+});
+
+grid.addEventListener('click', (event) => {
+    if (event.target.classList.contains('delete-btn')) {
+        event.target.closest('.forecast-item').remove();
+    }
 });
