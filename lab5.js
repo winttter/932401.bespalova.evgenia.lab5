@@ -34,6 +34,11 @@ function setForecastsToDOM(forecasts) {
     });
 }
 
+function saveForecasts() {
+    const forecasts = getForecastsFromDOM();
+    localStorage.setItem('forecasts', JSON.stringify(forecasts));
+}
+
 const addBtn = document.getElementById('add-forecast-btn');
 const grid = document.getElementById('forecast-grid');
 
@@ -49,10 +54,20 @@ addBtn.addEventListener('click', () => {
 
     const card = createForecastItem(title, description, probability);
     grid.appendChild(card);
+    saveForecasts();
 });
 
 grid.addEventListener('click', (event) => {
     if (event.target.classList.contains('delete-btn')) {
         event.target.closest('.forecast-item').remove();
+        saveForecasts();
     }
 });
+
+const saved = localStorage.getItem('forecasts');
+
+if (saved) {
+    setForecastsToDOM(JSON.parse(saved));
+} else {
+    saveForecasts();
+}
