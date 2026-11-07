@@ -260,3 +260,7 @@ body.light-theme .navbar a:hover {
     background: #007fb6;
     color: #ffffff;
 }
+
+.hidden {
+    display: none;
+}

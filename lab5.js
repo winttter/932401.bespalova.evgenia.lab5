@@ -86,3 +86,14 @@ if (saved) {
     saveForecasts();
 }
 
+const hideBtn = document.getElementById('hide-forecasts-btn');
+
+hideBtn.addEventListener('click', () => {
+    grid.classList.toggle('hidden');
+    
+    if (grid.classList.contains('hidden')) {
+        hideBtn.textContent = 'Показать прогнозы';
+    } else {
+        hideBtn.textContent = 'Скрыть прогнозы';
+    }
+});
