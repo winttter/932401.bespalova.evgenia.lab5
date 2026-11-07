@@ -64,6 +64,20 @@ grid.addEventListener('click', (event) => {
     }
 });
 
+const themeBtn = document.getElementById('change-theme-btn');
+
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    
+    const isLight = document.body.classList.contains('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+}
+
 const saved = localStorage.getItem('forecasts');
 
 if (saved) {
@@ -71,3 +85,4 @@ if (saved) {
 } else {
     saveForecasts();
 }
+
