@@ -40,7 +40,14 @@ function saveForecasts() {
 }
 
 const addBtn = document.getElementById('add-forecast-btn');
+if (!addBtn) {
+    console.error('Button with id "add-forecast-btn" not found.');
+}
+
 const grid = document.getElementById('forecast-grid');
+if (!grid) {
+    console.error('Element with id "forecast-grid" not found.');
+}
 
 addBtn.addEventListener('click', () => {
     const title = prompt('Название сферы:', 'Биотехнологии');
@@ -65,6 +72,9 @@ grid.addEventListener('click', (event) => {
 });
 
 const themeBtn = document.getElementById('change-theme-btn');
+if (!themeBtn) {
+    console.error('Button with id "change-theme-btn" not found.');
+}
 
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-theme');
@@ -87,6 +97,9 @@ if (saved) {
 }
 
 const hideBtn = document.getElementById('hide-forecasts-btn');
+if (!hideBtn) {
+    console.error('Button with id "hide-forecasts-btn" not found.');
+}
 
 hideBtn.addEventListener('click', () => {
     grid.classList.toggle('hidden');
